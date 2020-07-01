@@ -1,0 +1,47 @@
+﻿@model UserAdress
+
+
+
+<form asp-action="EditAdress" method="post">
+    <input type="hidden" asp-for="UserAdressID" />
+    <div class="form-group">
+        <label asp-for="Line1">Address line 1</label>
+        <div>
+            <span asp-validation-for="Line1" class="text-danger"></span>
+        </div>
+        <input asp-for="Line1" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Line2">Address line 2</label>
+        <div>
+            <span asp-validation-for="Line2" class="text-danger"></span>
+        </div>
+        <input asp-for="Line2" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Line3">Address line 3</label>
+        <div>
+            <span asp-validation-for="Line3" class="text-danger"></span>
+        </div>
+        <input asp-for="Line3" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="City">Town/City</label>
+        <div>
+            <span asp-validation-for="City" class="text-danger"></span>
+        </div>
+        <input asp-for="City" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Postcode">Post Code</label>
+        <div>
+            <span asp-validation-for="Postcode" class="text-danger"></span>
+        </div>
+        <input asp-for="Postcode" class="form-control" />
+    </div>
+    <div class="text-center">
+        <button class="btn btn-sm  btn-primary" type="submit">Save</button>
+
+    </div>
+
+</form>

@@ -1,0 +1,11 @@
+C:\Users\lenovo\source\repos\CvNetCore2\CvNetCore2\bin\Debug\netcoreapp2.0\CvNetCore2.deps.json
+C:\Users\lenovo\source\repos\CvNetCore2\CvNetCore2\bin\Debug\netcoreapp2.0\CvNetCore2.runtimeconfig.json
+C:\Users\lenovo\source\repos\CvNetCore2\CvNetCore2\bin\Debug\netcoreapp2.0\CvNetCore2.runtimeconfig.dev.json
+C:\Users\lenovo\source\repos\CvNetCore2\CvNetCore2\bin\Debug\netcoreapp2.0\CvNetCore2.dll
+C:\Users\lenovo\source\repos\CvNetCore2\CvNetCore2\bin\Debug\netcoreapp2.0\CvNetCore2.pdb
+C:\Users\lenovo\source\repos\CvNetCore2\CvNetCore2\obj\Debug\netcoreapp2.0\CvNetCore2.csprojAssemblyReference.cache
+C:\Users\lenovo\source\repos\CvNetCore2\CvNetCore2\obj\Debug\netcoreapp2.0\CvNetCore2.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\CvNetCore2\CvNetCore2\obj\Debug\netcoreapp2.0\CvNetCore2.AssemblyInfoInputs.cache
+C:\Users\lenovo\source\repos\CvNetCore2\CvNetCore2\obj\Debug\netcoreapp2.0\CvNetCore2.AssemblyInfo.cs
+C:\Users\lenovo\source\repos\CvNetCore2\CvNetCore2\obj\Debug\netcoreapp2.0\CvNetCore2.dll
+C:\Users\lenovo\source\repos\CvNetCore2\CvNetCore2\obj\Debug\netcoreapp2.0\CvNetCore2.pdb

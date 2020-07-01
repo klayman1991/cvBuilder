@@ -1,0 +1,180 @@
+
+.page {
+    /* Styles for better appearance on screens only -- are reset to defaults in print styles later */
+    /* Reflect the paper width in the screen rendering (must match size from @page rule) */
+    width: 21cm;
+    /* Reflect the paper height in the screen rendering (must match size from @page rule) */
+    min-height: 29.7cm;
+    /* Reflect the actual page margin/padding on paper in the screen rendering (must match margin from @page rule) */
+    /*padding-left: 2cm;
+    padding-top: 2cm;
+    padding-right: 2cm;
+    padding-bottom: 2cm;*/
+    /*padding: 2cm;*/
+}
+
+/* Use CSS Paged Media to switch from continuous documents to sheet-like documents with separate pages */
+
+@page {
+    /* You can only change the size, margins, orphans, widows and page breaks here */
+    /* Paper size and page orientation */
+    size: A4 portrait;
+    /* Margin per single side of the page */
+    margin-left: 2cm;
+    margin-top: 2cm;
+    margin-right: 2cm;
+    margin-bottom: 2cm;
+}
+
+.rTable {
+    display: table;
+}
+
+.rTableRow {
+    display: table-row;
+}
+
+.rTableHeading {
+    display: table-header-group;
+}
+
+.rTableBody {
+    display: table-row-group;
+}
+
+.rTableFoot {
+    display: table-footer-group;
+}
+
+.rTableCell, .rTableHead {
+    display: table-cell;
+}
+
+.break {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    /*padding: 0.75rem;*/
+    vertical-align: top;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.btable {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th,
+    .table td {
+        padding: 0.75rem;
+        vertical-align: top;
+       
+    }
+
+    .table thead th {
+        vertical-align: bottom;
+        
+    }
+
+    .table tbody + tbody {
+        border-top: 2px solid #dee2e6;
+    }
+
+    .table .table {
+        background-color: #fff;
+    }
+
+.prow {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    
+}
+
+.bborder {
+    border-bottom: 1px solid;
+    margin-top: 10px;
+}
+
+.opacity {
+    opacity: 0.2;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+
+    body:before {
+        content: '';
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('background.jpg');
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+    }
+
+.newDesign {
+   
+    
+    position:relative;
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 1280px;
+    height:100vh;
+    
+    padding: 10px 40px;
+    background: rgba(0,0,0,0.6);
+}
+
+.clear {
+    border:none;
+    border-bottom:1px solid #fff;
+    background: transparent;
+}
+
+.padding {
+    
+    margin: 10px;
+    
+}
+
+.padding2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left:20px;
+    padding-right:20px;
+   
+}
+.padding3 {
+    padding-top:0px;
+}
+
+.newDesign i{
+    margin:10px;
+}
+.kokolor {
+    color: rgb(114, 169, 81)
+}
+
+.size {
+    width: 150px;
+    height: 150px;
+}
+.picture {
+    background-image: url('webp.net-resizeimage.png');
+    position: fixed;
+   
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    object-fit: contain;
+}

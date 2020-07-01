@@ -1,0 +1,31 @@
+﻿@model CvNetCore2.Models.ViewModels.MainPage
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+
+
+
+    @if (Model.UserDetails.Count() == 0)
+    {
+        @await Html.PartialAsync("UserSummary", new UserDetails());
+    }
+    else
+    {
+        @foreach (var p in Model.UserDetails)
+        {
+            @await Html.PartialAsync("UserSummary", p);
+        }
+
+    }
+
+
+
+
+
+  

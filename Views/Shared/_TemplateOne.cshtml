@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/TemplateOne.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+
+    <title>@ViewBag.Cv</title>
+
+</head>
+<body>
+    
+        <div>
+            <h2><b>Wojciech Balasa</b></h2>
+            <h3><b>Junior Software Developer</b></h3>
+            <h5>Leicester | 07376127830 | wojciech.balasa@gmail.com</h5>
+        </div>
+        <div>
+            <h4>Summary</h4>
+            <p>“A huge number of jobs that are filled are never advertised to the public, or if they are, they’re filled by people who have a connection to the employer.” </p>
+        </div>
+        <div>
+            <h4>Areas of Expertise</h4>
+
+            <div class="form-group d-inline-block">
+                <ul>
+                    <li>C#</li>
+                    <li>ASP.Net Core MVC 2</li>
+                    <li>Entity Framework</li>
+                </ul>
+            </div>
+            <div class="form-group d-inline-block">
+                <ul>
+                    <li>MS SQL</li>
+                    <li>HTML5 & CSS3</li>
+                   <li>Visual Studio 2017</li>
+                </ul>
+            </div>
+            <div class="form-group d-inline-block">
+                <ul>
+                    <li>Team Leader</li>
+
+                    <li>Decision Making</li>
+                    <li>Training and Development</li>
+                    
+                </ul>
+            </div>
+            <div class="form-group d-inline-block">
+                <ul>
+                    <li>Leadership</li>
+                    <li>Teamwork</li>
+                    <li>Ability to Work Under Pressure</li>
+                </ul>
+            </div>
+
+        </div>
+    <div>
+        <h4>Work History</h4>
+        
+            <div class="workTime">
+               <p>2016 - present</p>
+
+            </div>
+            <div class="workDesc">
+                <h6>Machine Operator</h6>
+                <p class="workDesc">Hexcel</p>
+                <ul>
+                    <li>Production</li>
+                    <li>Quality</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+       
+    
+    @RenderBody()
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿@model CvNetCore2.Models.ViewModels.MainPage
+
+
+@{
+    ViewData["Title"] = "About you";
+}
+
+
+
+
+
+
+
+@if (Model.Abouts.Count() == 0)
+{
+    @await Html.PartialAsync("AboutSummary", new About());
+}
+else
+{
+    @foreach (var p in Model.Abouts)
+    {
+        @await Html.PartialAsync("AboutSummary", p);
+    }
+
+}
+
+
+
+
+

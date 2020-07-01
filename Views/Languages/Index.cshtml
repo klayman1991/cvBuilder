@@ -1,0 +1,33 @@
+﻿@model MainPage
+
+
+
+@{
+    ViewData["Title"] = "Languages";
+    Layout = "_Layout";
+}
+
+
+
+
+@await Html.PartialAsync("LanguagesSummary", new Language())
+
+@*Tutaj trzeba zrobic div i css przesunac w dol*@
+<br />
+<br />
+<div class="nav navbar bg-dark text-center">
+
+</div>
+<br />
+
+@foreach (var p in Model.Languages)
+{
+    @await Html.PartialAsync("LanguagesSummary", p)
+    <br />
+}
+
+
+
+
+
+

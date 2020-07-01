@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="~/jquery.js"></script>
+    <link href="~/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/css/A4Page.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <div class="newDesign body">
+        
+        @*<div class="body bg-white">*@
+            <div class="navbar navbar-dark bg-dark text-light padding2">
+                <a class="btn btn-dark text-light" href="http://localhost:57746/">Home </a>
+                <div><a class="btn btn-dark text-light" href="http://localhost:57746/Generator">CV Generator</a></div>
+            </div>
+
+            <div class="prow m-1 p-1">
+                <div class="col-3 d-block text-left">
+
+
+                    <a class="btn btn-dark d-block text-left padding" href="http://localhost:57746/"><i class="fa fa-user-circle text-left" aria-hidden="true"></i>    Personal Details </a>
+                    <a class="btn btn-dark d-block text-left padding" href="http://localhost:57746/Adress"><i class="fa fa-address-card" aria-hidden="true"></i>    Adress</a>
+                    <a class="btn btn-dark d-block text-left padding" href="http://localhost:57746/About"><i class="fa fa-pencil" aria-hidden="true"></i>    About you</a>
+                    <a class="btn btn-dark d-block text-left padding" href="http://localhost:57746/Courses"><i class="fa fa-book" aria-hidden="true"></i>    Courses</a>
+                    <a class="btn btn-dark d-block text-left padding" href="http://localhost:57746/Hobbies"><i class="fa fa-gamepad" aria-hidden="true"></i>    Hobbies</a>
+                    <a class="btn btn-dark d-block text-left padding" href="http://localhost:57746/Languages"><i class="fa fa-globe" aria-hidden="true"></i>    Languages</a>
+                    <a class="btn btn-dark d-block text-left padding" href="http://localhost:57746/Skills"><i class="fa fa-cogs" aria-hidden="true"></i>   Skills</a>
+                    <a class="btn btn-dark d-block text-left padding" href="http://localhost:57746/Work"><i class="fa fa-briefcase" aria-hidden="true"></i>   Work</a>
+
+
+                </div>
+                <div id="values" style="display:none" class="col-9">
+                    <div>@RenderBody()</div>
+
+                </div>
+            </div>
+       
+        <h2> </h2>
+    </div>
+     
+   
+    <script>
+
+        $(document).ready(function () {
+            $("#values").fadeIn();
+        });
+
+
+
+    </script>
+</body>
+
+</html>

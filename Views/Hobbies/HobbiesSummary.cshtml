@@ -1,0 +1,46 @@
+﻿@model Hobby
+
+<form asp-action="EditHobby" method="post">
+    <input type="hidden" asp-for="HobbyID" />
+    <div class="form-group">
+        @*<div class="">*@
+
+        <div>
+            <div class="form-group">
+                <label asp-for="HobbyText">Hobby</label>
+                <div><span asp-validation-for="HobbyText" class="text-danger"></span></div>
+                <input asp-for="HobbyText" class="form-control" />
+            </div>
+
+            @if (Model.HobbyID == 0)
+            {
+                <div class="text-right">
+                    <button class="btn btn-sm  btn-primary text-center" type="submit">Add New</button>
+                </div>
+            }
+            else
+            {
+                <div class="text-right">
+                    <button class="btn  btn-sm btn-primary text-center" type="submit"><i class="fa fa-save"></i></button>
+                    @*@await Html.PartialAsync("DeleteCourseSummary", Model)*@
+
+                    <button class="btn btn-sm  btn-danger btn" form="@Model.HobbyID" type="submit"><i class="fa fa-trash-o"></i></button>
+                    <button class="btn btn-sm btn-koko btn" type="submit"><i class="fa fa-eye"></i></button>
+                </div>
+            }
+        </div>
+    </div>
+</form>
+
+<form asp-action="DeleteHobbies" id="@Model.HobbyID" method="post">
+
+
+    <input type="hidden" asp-for="HobbyID" />
+
+
+
+</form>
+
+
+
+

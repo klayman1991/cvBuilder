@@ -1,0 +1,26 @@
+﻿@model MainPage
+
+
+@{
+    ViewData["Title"] = "Adress";
+}
+
+
+
+@if (Model.UserAdresses.Count() == 0)
+{
+    @await Html.PartialAsync("AdressSummary", new UserAdress());
+}
+else
+{
+    @foreach (var p in Model.UserAdresses)
+    {
+        @await Html.PartialAsync("AdressSummary", p);
+    }
+
+}
+
+
+
+
+

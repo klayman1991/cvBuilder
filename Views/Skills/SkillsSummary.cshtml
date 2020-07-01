@@ -1,0 +1,51 @@
+﻿@model Skills
+
+<form asp-action="EditSkills" method="post">
+    <input type="hidden" asp-for="SkillsID" />
+    <div class="form-group">
+        <div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="d-inline-block col-4">
+                        <label asp-for="SkillName">Skill</label>
+                        <div><span asp-validation-for="SkillName" class="text-danger"></span></div>
+                        <input asp-for="SkillName" class="form-control" />
+                    </div>
+                    <div class="d-inline-block col-4">
+                        <label asp-for="SkillLevel">Level</label>
+                        <div><span asp-validation-for="SkillLevel" class="text-danger"></span></div>
+                        <input asp-for="SkillLevel" type="text" class="form-control"/>
+                    </div>
+                    <div class="d-inline-block col-4">
+                        <label asp-for="SkillDescription">Description (optional)</label>
+                        <div><span asp-validation-for="SkillDescription" class="text-danger"></span></div>
+                        <input asp-for="SkillDescription" type="text" class="form-control" />
+                    </div>
+                </div>
+            </div>
+
+
+            @if (Model.SkillsID == 0)
+            {
+                <div class="text-right">
+                    <button class="btn btn-sm btn-primary text-center" type="submit">Add New</button>
+                </div>
+            }
+            else
+            {
+                <div class="text-right">
+                    <button class="btn btn-sm btn-primary text-center" type="submit"><i class="fa fa-save"></i></button>
+                    <button class="btn btn-sm btn-danger btn" form="@Model.SkillsID" type="submit"><i class="fa fa-trash-o"></i></button>
+                    <button class="btn btn-sm btn-koko btn" type="submit"><i class="fa fa-eye"></i></button>
+                </div>
+            }
+        </div>
+    </div>
+</form>
+
+<form asp-action="DeleteSkills" id="@Model.SkillsID" method="post">
+    <input type="hidden" asp-for="SkillsID" />
+</form>
+
+
+

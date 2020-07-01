@@ -1,0 +1,18 @@
+﻿@model CvNetCore2.Models.About
+
+
+
+<form asp-action="EditAbout" method="post">
+<input type="hidden" asp-for="AboutID" />
+<div class="form-group">
+    <label asp-for="AboutText">About yourself: </label>
+
+    <textarea rows="5" asp-for="AboutText" class="form-control"></textarea>
+</div>
+
+    <div class="text-center">
+        <button class="btn btn-sm btn-primary" type="submit">Save</button>
+        <a asp-action="Index" class="btn  btn-sm btn-secondary">Cancel</a>
+    </div>
+</form>
+

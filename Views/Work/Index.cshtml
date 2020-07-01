@@ -1,0 +1,33 @@
+﻿@*@model MainPage
+
+
+
+@{
+    ViewData["Title"] = "Work Experiance";
+    Layout = "_Layout";
+}*@
+
+
+
+Over complicated class, will repair later. Eventually...
+@*@await Html.PartialAsync("WorkSummary", new Work())*@
+
+
+<br />
+<br />
+<div class="nav navbar bg-light text-center">
+
+</div>
+<br />
+
+@*@foreach (var p in Model.Works)
+{
+    @await Html.PartialAsync("WorkSummary", p)
+    <br />
+}*@
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+﻿@model MainPage
+
+
+
+@{
+    ViewData["Title"] = "Skills";
+    Layout = "_Layout";
+}
+
+
+
+
+@await Html.PartialAsync("SkillsSummary", new Skills())
+
+
+<br />
+<br />
+<div class="nav navbar bg-light text-center">
+
+</div>
+<br />
+
+@foreach (var p in Model.Skills)
+{
+    @await Html.PartialAsync("SkillsSummary", p)
+    <br />
+}
+
+
+
+
+
+

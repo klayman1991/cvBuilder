@@ -1,0 +1,183 @@
+﻿@model MainPage
+
+@{
+    ViewData["Title"] = "Courses";
+    Layout = "_GeneratorLayout";
+}
+
+
+
+
+
+    <div class="bg-white changeMe">
+        <div class="panel panel-default bg-white padding2">
+            <div class="prow bg-white">
+                <div class="col-6 bg-white ">
+                    <div class="row">
+                        <div class="col-6 ">
+                            <div class="size picture"></div>
+                        </div>
+                        <div class="col-6">
+                            @foreach (var p in Model.UserDetails)
+                            {
+                                <h5>@p.Name @p.Surname </h5>
+                                <p>@p.Position</p>
+
+
+                            }
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="bg-light col-6 text-left">
+                    @foreach (var p in Model.UserAdresses)
+                    {
+                        <p>@p.Line1 @p.Line2 @p.Line3</p>
+                        <p>@p.Postcode @p.City</p>
+                    }
+                    @foreach (var p in Model.UserDetails)
+                    {
+
+                        <p><b>@p.Email</b></p>
+                        <p><b>@p.Mobile</b></p>
+
+                    }
+                </div>
+            </div>
+
+            <div class="prow">
+                <div class="col-6 bg-white ">
+
+                    @if (Model.Abouts != null)
+                    {
+                        <div class="bborder"><h5><b>Professional Profile</b></h5></div>
+
+                        @foreach (var p in Model.Abouts)
+                        {
+                            @p.AboutText
+                        }
+                    }
+
+
+                    @if (Model.Courses != null)
+                    {
+                        <div class="bborder"><h5><b>Courses</b></h5></div>
+
+                        <br />
+
+                        @foreach (var p in Model.Courses)
+                        {
+
+                            <p><b>@p.CoursesName</b></p>
+                            <p>@p.CoursesDescription</p>
+
+                        }
+
+
+
+
+                    }
+
+                    @if (Model.Languages != null)
+                    {
+                        <div class="bborder"><h5><b>Professional Skills</b></h5></div>
+                        <br />
+                        <Table class="btable">
+
+                            @foreach (var p in Model.Skills)
+                            {
+                                <tr>
+                                    <td>@await Html.PartialAsync("SkillsDesignSummary", p)</td>
+                                </tr>
+
+                            }
+
+                        </Table>
+
+                    }
+                    @if (Model.Skills != null)
+                    {
+                        <div class="bborder"><h5><b>Languages</b></h5></div>
+                        <br />
+                        <table class="btable">
+                            @foreach (var p in Model.Languages)
+                            {
+                                <tr>
+                                    <td>@await Html.PartialAsync("LanguageDesignSummary", p)</td>
+                                </tr>
+
+                            }
+                        </table>
+
+                    }
+
+
+
+                </div>
+                <div class="col-6 bg-light">
+
+
+                    @if (Model.Courses != null)
+                    {
+                        <div class="bborder"><h5><b>Work Experiance</b></h5></div>
+                        <br />
+                        <div class="row">
+                            <div class="col-4 d-inline-block">
+                                <p><b>Core Management Logistics</b></p>
+                                <p>2013 - 2016</p>
+
+                            </div>
+                            <div class="col-8 d-inline-block">
+                                <h6 ><b>Team Leader</b></h6>
+                                <p>After succesfull promotion to position of Team Leader I was responsible for staff up to 10 people.</p>
+                                <ul>
+                                    <li>Active operation problem solving on the main floor and in WMS</li>
+                                    <li>Development of user manuals </li>
+                                    <li>Staff and middle management training</li>
+                                    <li>Creation of daily reports for internal and external customers</li>
+                                    <li>Daily, weekly and monthly generation of reports for internal and external customers on all levels</li>
+                                    <li>Pick / despatch planning for next day</li>
+                                </ul>
+                                <h6><b>IT Support | Implementation Team</b></h6>
+                                <p>
+                                    Choosen out of hundreds to specially trained Implementation Team of 4, to support in day-to-day task in IT support department.
+                                </p>
+                                <ul>
+                                    <li>Active implementation and customization of WMS</li>
+                                    <li>Developing SQL raports</li>
+                                    <li>Fron-end testing </li>
+                                    <li>Implementation third-party software</li>
+                                    <li>Implementation new customers (e-commerce)</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 d-inline-block">
+                                <p><b>Templine </b></p>
+                                <p>2012 - 2013</p>
+
+                            </div>
+                            <div class="col-8 d-inline-block">
+                                <h6><b>Warehouse Operative and Administrator</b></h6>
+                                <ul>
+                                    <li>Pick / despatch planning for next day</li>
+                                    <li> Writing emails, sending post/letters, generating invoices/delivery notes and printing documents</li>
+                                    <li>Supervision of good-in and generating raports</li>
+                                    <li>Picking, packing and despatching</li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    }
+
+                </div>
+            </div>
+            <div class="bg-primary ">asdsda</div>
+        </div>
+
+
+    </div>
+

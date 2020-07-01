@@ -1,0 +1,51 @@
+﻿@model Language
+
+<form asp-action="EditLanguages" method="post">
+    <input type="hidden" asp-for="LanguageID" />
+    <div class="form-group">
+        <div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="d-inline-block col-4 col-sm-4 text-white">
+                        <label asp-for="LanguageName">Language</label>
+                        <div><span asp-validation-for="LanguageName" class="text-danger"></span></div>
+                        <input asp-for="LanguageName" class="form-control clear text-white" />
+                    </div>
+                    <div class="d-inline-block col-4 col-sm-4 text-white">
+                        <label asp-for="LanguageLevel">Level</label>
+                        <div><span asp-validation-for="LanguageLevel" class="text-danger"></span></div>
+                        <input asp-for="LanguageLevel" type="text" class="form-control clear text-white" data-provide="datepicker" />
+                    </div>
+                    <div class="d-inline-block col-4 col-sm-4 text-white">
+                        <label asp-for="LanguageDescription">Comments (optional)</label>
+                        <div><span asp-validation-for="LanguageDescription" class="text-danger"></span></div>
+                        <input asp-for="LanguageDescription" type="text" class="form-control clear text-white" data-provide="datepicker" />
+                    </div>
+                </div>
+            </div>
+          
+
+            @if (Model.LanguageID == 0)
+            {
+                <div class="text-right">
+                    <button class="btn btn-sm btn-primary text-center" type="submit">Add New</button>
+                </div>
+            }
+            else
+            {
+                <div class="text-right">
+                    <button class="btn btn-sm btn-primary text-center" type="submit"><i class="fa fa-save"></i></button>
+                    <button class="btn btn-sm btn-danger btn" form="@Model.LanguageID" type="submit"><i class="fa fa-trash-o"></i></button>
+                    <button class="btn btn-sm btn-koko btn" type="submit"><i class="fa fa-eye"></i></button>
+                </div>
+            }
+        </div>
+    </div>
+</form>
+
+<form asp-action="DeleteLanguages" id="@Model.LanguageID" method="post">
+    <input type="hidden" asp-for="LanguageID" />
+</form>
+
+
+
